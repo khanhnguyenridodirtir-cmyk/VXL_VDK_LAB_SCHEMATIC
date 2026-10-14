@@ -154,7 +154,7 @@ void updateLEDMatrix(int index) {
 void handleShifft(){
 
 	    indexShift++;
-	    if (indexShift > 8) {
+	    if (indexShift >= 8) {
 	            indexShift = 0;
 	    }
 }
@@ -301,24 +301,25 @@ int main(void)
 
 	 if(DO_PER_250ms==1){
 		 SetTimer(250,0);
-			 second ++;
-			  if ( second >= 60) {
-				   second = 0;
-				   minute ++;
-			  }
-			  if( minute >= 60) {
-				   minute = 0;
-				   hour ++;
-			  }
-			 if( hour >=24) {
-				   hour = 0;
-			   }
 			 update7SEG(index_led);
 			 index_led=(index_led+1)%MAX_LED;
 	 }
-	 updateClockBuffer();
+
 	 if(DO_PER_1000ms==1){
 		 SetTimer(1000,2);
+		 second ++;
+		  if ( second >= 60) {
+			   second = 0;
+			   minute ++;
+		  }
+		  if( minute >= 60) {
+			   minute = 0;
+			   hour ++;
+		  }
+		 if( hour >=24) {
+			   hour = 0;
+		   }
+		 updateClockBuffer();
 		 HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_4);
 	}
 	 if(DO_Matrixms==1){

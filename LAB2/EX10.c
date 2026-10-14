@@ -113,7 +113,7 @@ uint8_t matrix_buffer_B[16] ={0x0, 0x6E, 0x6E, 0x99, 0xFF, 0xFF,0xFF, 0xFF,0x0, 
 
 
 void updateLEDMatrix(int index) {
-     //1. TẮT TẤT CẢ 8 CỘT (Reset v�? 0 để tránh lem hình/bóng m�?)
+     //1. TẮT TẤT CẢ 8 CỘT 
 	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_12|GPIO_PIN_13
 			  	  	  	  	  |GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_SET);
 

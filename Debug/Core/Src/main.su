@@ -1,0 +1,14 @@
+main.c:65:6:Send_Task_Log	128	static
+main.c:77:6:HAL_TIM_PeriodElapsedCallback	16	static
+main.c:83:6:Task0_5_BlinkLedRed	8	static
+main.c:87:6:Task1_0_BlinkLedGreen	8	static
+main.c:92:6:Task1_5_BlinkLedYellow	8	static
+main.c:96:6:Task2_0_BlinkLedRed_Green	8	static
+main.c:100:6:Task2_5_BlinkLedRed_Yellow	8	static
+main.c:105:6:OneshotTask	8	static
+main.c:115:5:main	40	static
+main.c:171:6:SystemClock_Config	72	static
+main.c:207:13:MX_TIM2_Init	32	static
+main.c:252:13:MX_USART1_UART_Init	8	static
+main.c:285:13:MX_GPIO_Init	32	static
+main.c:315:6:Error_Handler	4	static,ignoring_inline_asm
